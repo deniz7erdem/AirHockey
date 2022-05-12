@@ -171,7 +171,7 @@ function gameBall() {
         var dist = Math.sqrt(distX * distX + distY * distY);
         adRad = 33 + 50;
         if (dist < adRad) {
-            var angle = Math.atan2(distY, distX);
+            var ang = Math.atan2(distY, distX);
             var sin = Math.sin(ang);
             var cos = Math.cos(ang);
             var pos0 = {
@@ -237,7 +237,7 @@ function updateGameArea() {
         ball.speedX = (-ball.speedX);
         if (ball.y > 210 && ball.y < 510) {
             pRs++;
-            if (pRs >= 1) {
+            if (pRs >= 5) {
                 gameArea.canvas.remove();
                 mainhtml = document.createElement('header');
                 mainhtml.className = 'header d-flex align-items-center';
@@ -261,7 +261,7 @@ function updateGameArea() {
         ball.speedX = (-ball.speedX);
         if (ball.y > 210 && ball.y < 510) {
             pBs++;
-            if (pBs >= 1) {
+            if (pBs >= 5) {
                 gameArea.canvas.remove();
                 mainhtml = document.createElement('header');
                 mainhtml.className = 'header d-flex align-items-center';
